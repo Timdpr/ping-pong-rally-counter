@@ -35,7 +35,7 @@ const int DETECTION_DELAY = 400; // ** Change delay between detections here (ms)
 unsigned long lastDetection = 0;
 
 // Game timeout
-const int TIMEOUT_LENGTH = 2500; // ** Change timeout length here (ms) **
+const int TIMEOUT_LENGTH = 2200; // ** Change timeout length here (ms) **
 unsigned long timeoutStartTime = 0;
 bool timeoutStart = false;
 
@@ -71,8 +71,6 @@ void loop() {
       timeoutStart = false;
       writeMatrixRows(NUMBERS[hitCounter]); // display 0
   }
-  // Otherwise, just keep displaying the score
-//  writeMatrixRows(NUMBERS[hitCounter]);
 }
 
 /** Writes an array of bytes, each representing a row, to the 8x8 dot matrix display */
